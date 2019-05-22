@@ -11,11 +11,16 @@
     const modal = new SimpleModal({
       mode: 'confirm',
       content: 'God is a girl?',
-      esc: true,
-      transition: true,
+      title: 'Scream from the soul',
       okText: 'Yes',
       cancelText: 'No',
-    }).then((e) => console.log(e))
+      esc: true,
+      enter: true,
+      transition: true,
+    }).then((action, options) => {
+      console.log(action)
+      console.log(options)
+    })
   </script>
 </body>
 </html>
