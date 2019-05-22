@@ -1,0 +1,96 @@
+.simple-modal-dialog-container {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(128,128,128,.75);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  z-index: 999;
+}
+
+.simple-modal-dialog-container_transition {
+  transition: background-color .2s;
+}
+
+.simple-modal-dialog-container_transition.transition_start {
+  background-color: rgba(0,0,0,0);
+}
+
+.simple-modal-dialog-container_transition .simple-modal-dialog-content-wrapper {
+  transition: transform .2s;
+}
+
+.simple-modal-dialog-container_transition.transition_start .simple-modal-dialog-content-wrapper {
+  transform: scale3d(0,0,0);
+}
+
+.simple-modal-dialog-content-wrapper {
+  position: relative;
+  top: 25px;
+  width: 480px;
+  min-height: 320px;
+  display: flex;
+  flex-flow: column nowrap;
+  border-radius: 4px;
+  border: solid 1px darkslategray;
+  background-color: white;
+}
+
+.simple-modal-dialog-title,
+.simple-modal-dialog-footer {
+  flex: none;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  font-size: 22px;
+}
+
+.simple-modal-dialog-title {
+  justify-content: flex-start;
+  padding-left: 12px;
+  border-bottom: solid 1px darkslategray;
+}
+
+.simple-modal-dialog-content {
+  flex: auto;
+  font-size: 16px;
+  padding: 16px;
+}
+
+.simple-modal-dialog-footer {
+  justify-content: flex-end;
+  padding-right: 12px;
+  border-top: solid 1px darkslategray;
+}
+
+.simple-modal-dialog-footer-button {
+  -webkit-appearance: button;
+  outline: none;
+  box-sizing: content-box;
+  height: 32px;
+  min-width: 64px;
+  padding: 0 4px;
+  border-radius: 4px;
+  margin-left: 16px;
+  font-size: 18px;
+  transition: font-size .2s;
+}
+
+.simple-modal-dialog-footer-button:hover {
+  font-size: 20px;
+}
+
+.simple-modal-dialog-footer-button_ok {
+  background-color: deepskyblue;
+  border: none;
+  color: white;
+}
+
+.simple-modal-dialog-footer-button_cancel {
+  background-color: white;
+  border: solid 1px rgb(216, 216, 216);
+  color: rgba(0,0,0,.75)
+}

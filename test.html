@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="dist/index.css"></link>
+  <script src="dist/index.js"></script>
+</head>
+<body>
+  <script>
+    const modal = new SimpleModal({
+      mode: 'confirm',
+      content: 'God is a girl?',
+      esc: true,
+      transition: true,
+      okText: 'Yes',
+      cancelText: 'No',
+    }).then((e) => console.log(e))
+  </script>
+</body>
+</html>
